@@ -41,8 +41,12 @@ A monolithic Flask web application that renders a static HTML page using Jinja2.
 
 ```bash
 cd centralized_app
-docker build -t cristianpilapanta/centralized-app .
-docker run -p 5000:5000 cristianpilapanta/centralized-app
+docker build -t cristianp970/centralized-app .
+docker run -p 5000:5000 cristianp970/centralized-app
+
+# Note:
+# Replace cristianp970 with your own DockerHub username,
+# and distributed-system with the name you want for your Docker image (e.g., yourname/project-name).
 ```
 
 ### 🌐 Access
@@ -69,9 +73,13 @@ Because the backend serves both the logic and the HTML. Only one container is ne
 ### ▶️ How to Build and Run Locally
 
 ```bash
-cd distributed_system/backend
-docker build -t cristianpilapanta/distributed-system .
-docker run -p 5000:5000 cristianpilapanta/distributed-system
+cd distributed_system
+docker build -t cristianp970/distributed-system .
+docker run -p 5000:5000 cristianp970/distributed-system
+
+# Note:
+# Replace cristianp970 with your own DockerHub username,
+# and distributed-system with the name you want for your Docker image (e.g., yourname/project-name).
 ```
 
 ### 🌐 Access
@@ -87,6 +95,7 @@ You can run both systems directly from DockerHub **without cloning the repositor
 ### ✅ Minimum Requirements
 
 - Docker Desktop or Docker Engine installed
+- Docker must be open and running.
 - Internet connection to pull Docker images
 - No need for Python, Flask, or VS Code
 - No source code required
@@ -95,40 +104,23 @@ You can run both systems directly from DockerHub **without cloning the repositor
 
 ### ▶️ Run Centralized App via DockerHub
 
+Open **Command Prompt (CMD)** or **PowerShell**, then run:
+
 ```bash
-docker run -p 5000:5000 cristianpilapanta/centralized-app
+docker run -p 5000:5000 cristianp970/centralized-app
 ```
 
 ### ▶️ Run Distributed System via DockerHub
 
+Open **Command Prompt (CMD)** or **PowerShell**, then run:
+
 ```bash
-docker run -p 5000:5000 cristianpilapanta/distributed-system
+docker run -p 5000:5000 cristianp970/distributed-system
 ```
 
 ### 🌐 Access
 
-Open: http://localhost:5000
-
----
-
-### ⚠️ Port Note
-
-If port `5000` is already in use, you can remap it:
-
-```bash
-docker run -p 8080:5000 cristianpilapanta/distributed-system
-```
-
-Then go to: http://localhost:8080
-
----
-
-### 🔁 Optional: Remove Docker Images After Testing
-
-```bash
-docker rmi cristianpilapanta/centralized-app
-docker rmi cristianpilapanta/distributed-system
-```
+Open in a Web Browser: http://localhost:5000
 
 ---
 
